@@ -8,7 +8,7 @@ Show what you're watching, listening to or working on with Discord Rich Presence
 
 This is the public distribution guide. The application source repository remains private. The [public distribution repository](https://github.com/LUNA12379/presence-studio-releases) is for documentation and release downloads.
 
-> The first public installer and live update channel are being prepared. There is no public release download yet. The instructions below describe setup once an installer is available.
+**[Download the latest Windows installer](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · Open the release and choose `Presence-Studio-<version>-Setup.exe` under **Assets**. The GitHub-generated “Source code” archives contain this distribution guide, not the app.
 
 ## Features
 
@@ -18,11 +18,11 @@ This is the public distribution guide. The application source repository remains
 - Crop photos to 512 × 512 or 1024 × 1024 PNG, or keep the full image with transparent padding.
 - Show an always-on-top desktop card or a transparent OBS Browser Source.
 - Switch between English and Korean, with your choice saved across restarts.
-- Check for updates in the app, then choose when to download and install. This requires a connected release channel.
+- Check for updates from the public release channel in the app, then choose when to download and install.
 
 ## Install and connect
 
-1. When published, download `Presence-Studio-<version>-Setup.exe` from [Releases](https://github.com/LUNA12379/presence-studio-releases/releases). The installer includes Node.js and downloads Microsoft WebView2 if missing. An internet connection may be needed. .NET Framework 4.7.2 or later is required.
+1. Download `Presence-Studio-<version>-Setup.exe` from [Releases](https://github.com/LUNA12379/presence-studio-releases/releases). The installer includes Node.js and downloads Microsoft WebView2 if missing. An internet connection may be needed. .NET Framework 4.7.2 or later is required.
 2. Open Presence Studio and the **Discord desktop app**. Choose **EN / 한국어** in the top bar or first-run guide. New installations start in English; existing Korean installations keep Korean.
 3. Choose **New Application** in the [Discord Developer Portal](https://discord.com/developers/applications). Use **the name you want displayed on Discord**. Copy the **Application ID** from General Information into **Connections & settings → Default Application ID**, then save. No password, user token or bot token is needed.
 4. Copy the extension folder path shown in the app. Open `edge://extensions` in Edge or `chrome://extensions` in Chrome, enable **Developer mode**, choose **Load unpacked**, and select that folder. Refresh your YouTube tabs. The app's extension-manager button opens Edge.
@@ -52,8 +52,10 @@ To use the same photo in both places, choose it under **My images**, crop and sa
 - **Desktop:** enable **Overlay → Show on desktop** and drag the card into position. Position lock and click-through are available.
 - **OBS:** add a Browser Source and paste the address and dimensions from the app. Keep the address private: it includes a local access key. OBS works independently of the desktop-overlay switch.
 - **Presets:** **Save as preset** uses the activity title as its name. Select it from **Saved presets** to load the editor, then click **Show this activity** to publish. Loading alone does not change your current activity.
-- **Updates:** once the release channel is connected, use **Connections & settings → App updates**. Checking does not install anything. Downloaded installers are checked against the release's SHA-256 digest before installation.
+- **Updates:** use **Connections & settings → App updates**. Enable **Check for updates when the app starts** to check on launch. Select **Download new version**, then **Install and restart** when ready. Checking does not download or install anything. Downloaded installers are checked against the release's SHA-256 digest before installation. If extension files change, reload the extension in your browser's extension manager and refresh YouTube tabs.
 - **Shortcuts:** `Ctrl+Shift+P` toggles sharing; `Ctrl+Shift+O` toggles the desktop overlay. Closing the window keeps the app in the tray. Use **Quit** to exit completely.
+
+If you used an early build with an unconfigured update channel, install the latest Setup.exe once to connect it. Later releases can be installed from the app.
 
 Application IDs, presets, images and language preferences live in `%APPDATA%\PresenceStudio`. They survive updates, restarts and uninstalling the app. Uninstalling keeps this folder so you can reinstall without losing your setup.
 
