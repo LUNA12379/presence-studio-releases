@@ -4,7 +4,7 @@
 
 지금 보는 영상, 듣는 음악, 직접 꾸민 활동을 Discord 활동과 데스크톱·OBS 오버레이에 표시하는 앱입니다.
 
-**Windows 10/11 x64 · YouTube & YouTube Music · English / 한국어**
+**Windows 10/11 x64 · YouTube · YouTube Music · SoundCloud · English / 한국어**
 
 공개 배포용 안내입니다. 소스 저장소는 비공개로 유지하며, [공개 배포 저장소](https://github.com/LUNA12379/presence-studio-releases)에는 설명서와 배포 파일을 올립니다.
 
@@ -12,7 +12,7 @@
 
 ## 주요 기능
 
-- 브라우저 확장으로 YouTube·YouTube Music 재생 감지
+- 브라우저 확장으로 YouTube·YouTube Music·SoundCloud 재생 감지
 - 제목·상태·이미지·링크와 경과 시간·남은 시간으로 직접 활동 꾸미기
 - 최대 30개 프리셋 저장, 편집기에서 불러오기 또는 프리셋 메뉴에서 바로 적용
 - 사진 자르기, 투명 여백으로 전체 담기, 512 × 512·1024 × 1024 PNG 저장
@@ -25,12 +25,20 @@
 1. [Releases](https://github.com/LUNA12379/presence-studio-releases/releases)에서 `Presence-Studio-<버전>-Setup.exe`를 내려받으세요. Node.js가 포함되며, Microsoft WebView2가 없으면 인터넷으로 설치합니다. .NET Framework 4.7.2 이상이 필요합니다.
 2. Presence Studio와 **Discord 데스크톱 앱**을 실행하세요. 앱 상단이나 처음 뜨는 설명서의 **EN / 한국어**에서 언어를 고릅니다. 신규 설치는 영어로 시작하고 기존 설정은 한국어를 유지합니다.
 3. [Discord 개발자 페이지](https://discord.com/developers/applications)에서 **New Application**을 눌러 **Discord에 표시하고 싶은 이름**으로 앱을 만드세요. General Information의 **Application ID**를 **연결 & 설정 → 기본 Application ID**에 저장합니다. 비밀번호·사용자 토큰·봇 토큰은 필요 없습니다.
-4. 앱에 나온 확장 폴더 경로를 복사하세요. Edge의 `edge://extensions` 또는 Chrome의 `chrome://extensions`에서 **개발자 모드 → 압축 풀린 확장 프로그램 로드**로 해당 폴더를 선택합니다. 기존 YouTube 탭도 새로고침하세요. 앱의 확장 관리 버튼은 Edge를 엽니다.
-5. 영상을 재생하세요. 앱의 **활동 공유**를 켜고, Discord의 활동 공유도 꺼져 있다면 켜 주세요.
+4. 앱에 나온 확장 폴더 경로를 복사하세요. Edge의 `edge://extensions` 또는 Chrome의 `chrome://extensions`에서 **개발자 모드 → 압축 풀린 확장 프로그램 로드**로 해당 폴더를 선택합니다. 기존 YouTube·SoundCloud 탭도 새로고침하세요. 앱의 확장 관리 버튼은 Edge를 엽니다.
+5. 영상이나 음악을 재생하세요. 앱의 **활동 공유**를 켜고, Discord의 활동 공유도 꺼져 있다면 켜 주세요.
 
 확장은 설치 파일에 포함되며 Chromium의 Manifest V3를 사용합니다. Edge에서 동작을 검증했으며 Chrome에도 같은 폴더를 로드하는 구조입니다. Chrome에서는 아직 Edge와 동일한 전체 흐름 검증을 마치지 않았습니다. 현재 브라우저 스토어를 통한 설치는 제공하지 않습니다. [Chrome 공식 압축 풀린 확장 설치 안내](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)도 참고하세요.
 
 설치 파일에는 아직 코드 서명이 없어 Windows에서 알 수 없는 게시자 경고가 나올 수 있습니다. 프로젝트의 공식 배포 페이지에서 받은 파일을 사용하세요.
+
+## SoundCloud 사용하기
+
+앱 업데이트 후 `edge://extensions` 또는 `chrome://extensions`에서 **Presence Studio — YouTube & SoundCloud** 확장(이전 이름: **YouTube → Discord 활동**)을 새로고침하세요. 브라우저가 SoundCloud 접근 권한을 요청하면 허용한 뒤 SoundCloud 탭도 새로고침하고 곡을 재생하세요.
+
+하단 재생바에서 곡명·아티스트·커버 이미지·재생 시간·일시정지를 읽습니다. 음악을 재생하면서 다른 SoundCloud 페이지를 둘러봐도 현재 곡을 표시합니다. 자동 활동 종류는 **듣는 중**이며, 사이트를 열 때 복원된 예전 일시정지 곡은 직접 재생하기 전까지 표시하지 않습니다.
+
+여러 탭이 재생 중이면 마지막으로 재생을 시작한 탭이 우선입니다. 일시정지하면 다른 재생 탭으로 전환하며, 대시보드의 **이 탭 고정**으로 고정할 수도 있습니다. 직접 입력 모드를 선택하면 커스텀 활동이 우선합니다. 이번 지원은 브라우저의 SoundCloud 웹사이트이며 별도 PC 앱 감지는 포함하지 않습니다. 비공개 곡 링크는 공유하지 않습니다.
 
 ## Discord 앱은 하나? 두 개?
 
@@ -52,7 +60,7 @@
 - **데스크톱:** **오버레이 → 데스크톱에 표시**를 켜고 카드를 드래그합니다. 위치 잠금과 마우스 클릭 통과를 사용할 수 있습니다.
 - **OBS:** 브라우저 소스에 앱이 알려 주는 주소와 크기를 입력합니다. 주소에는 로컬 접근 키가 있으므로 공개하지 마세요. 데스크톱 오버레이가 꺼져 있어도 OBS에는 표시됩니다.
 - **프리셋:** **프리셋으로 저장**하면 현재 활동 제목으로 저장합니다. **저장한 프리셋**에서 내용을 불러온 뒤 **이 활동으로 표시하기**로 적용합니다. 불러오기만 해서는 현재 공유 활동이 바뀌지 않습니다.
-- **업데이트:** **연결 & 설정 → 앱 업데이트**에서 확인합니다. **앱을 켤 때 새 버전 확인**을 켜면 실행할 때 확인합니다. **새 버전 다운로드 → 설치하고 다시 시작** 순서로 진행하며, 확인만으로 다운로드하거나 설치하지 않습니다. 내려받은 파일의 SHA-256을 배포 정보와 대조한 뒤 설치합니다. 확장 파일이 변경되면 브라우저 확장 관리에서 확장과 YouTube 탭을 새로고침하세요.
+- **업데이트:** **연결 & 설정 → 앱 업데이트**에서 확인합니다. **앱을 켤 때 새 버전 확인**을 켜면 실행할 때 확인합니다. **새 버전 다운로드 → 설치하고 다시 시작** 순서로 진행하며, 확인만으로 다운로드하거나 설치하지 않습니다. 내려받은 파일의 SHA-256을 배포 정보와 대조한 뒤 설치합니다. 확장 파일이 변경되면 브라우저 확장 관리에서 확장과 YouTube·SoundCloud 탭을 새로고침하세요.
 - **단축키:** `Ctrl+Shift+P`는 활동 공유, `Ctrl+Shift+O`는 데스크톱 오버레이를 켜고 끕니다. 창을 닫으면 트레이에 남고 **종료**를 눌러야 완전히 꺼집니다.
 
 Application ID·프리셋·사진·언어 설정은 `%APPDATA%\PresenceStudio`에 저장합니다. 업데이트·PC 재부팅 후에도 유지되며 앱을 제거해도 이 폴더는 남아 다시 설치할 때 사용할 수 있습니다.
@@ -67,4 +75,4 @@ Application ID·프리셋·사진·언어 설정은 `%APPDATA%\PresenceStudio`�
 
 문제는 [Issues](https://github.com/LUNA12379/presence-studio-releases/issues)에 앱 버전과 재현 순서를 적어 주세요. `config.json`, 생성된 `connection.js`, 개인 오버레이 주소나 개인정보가 담긴 화면은 그대로 첨부하지 마세요.
 
-Presence Studio는 Discord·Google·YouTube·Microsoft와 제휴하지 않은 독립 프로젝트입니다.
+Presence Studio는 Discord·Google·YouTube·SoundCloud·Microsoft와 제휴하지 않은 독립 프로젝트입니다.
