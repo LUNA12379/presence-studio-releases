@@ -40,11 +40,19 @@ The extension reads the bottom miniplayer: track title, artist, cover art, playb
 
 When several supported tabs are playing, the most recently started tab wins. Pause it to fall back to another playing tab, or use **Pin this tab** on the dashboard. Custom activities still take priority when selected. This version supports the SoundCloud website in the browser, not a separate desktop application. Private track links are not shared.
 
-## One Discord application or two?
+## Separate Discord application names
 
-One application works for automatic and custom activities. To show different app names, create a second application and save its ID under **Custom activity Application ID**. Leave it blank to use the default ID for both.
+The current connection uses the registered application name. Under **Connections & settings → My Discord application**, save these IDs and click **Save ID and connect**:
 
-If an application is named **YouTube**, SoundCloud and custom activities still appear under that name. For multiple media services, use a name such as Presence Media. Discord may also attach a small YouTube logo. This does **not** change what the extension detects. A separate application lets custom activities use another name.
+| Field | Used for |
+| --- | --- |
+| **Default Application ID** | YouTube, YouTube Music, and any activity without a dedicated ID. |
+| **SoundCloud Application ID** (optional) | SoundCloud playback. Create an application named SoundCloud if that is the name you want displayed. |
+| **Custom activity Application ID** (optional) | Activities made in Customize, for example under the name Presence Studio. |
+
+The connection switches automatically with the selected media tab or custom activity. Leave a dedicated field blank to use the default ID. One application is enough if you want the same name everywhere. IDs are saved on this PC and survive app and computer restarts; no bot token or server invitation is needed.
+
+If the default application is named **YouTube**, SoundCloud and custom activities without dedicated IDs also appear under that name. This does not change what the extension detects. Discord controls the small logo in the activity header; naming an app SoundCloud does not guarantee an automatic SoundCloud logo.
 
 ## Images: two destinations
 
