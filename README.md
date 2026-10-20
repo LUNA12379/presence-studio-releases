@@ -4,7 +4,7 @@
 
 Show what you're watching, listening to or working on with Discord Rich Presence, a desktop overlay and OBS.
 
-**Windows 10/11 x64 · YouTube · YouTube Music · SoundCloud · English / 한국어**
+**Windows 10/11 x64 · Edge / Chrome · YouTube · YouTube Music · SoundCloud · English / 한국어**
 
 This is the public distribution guide. The application source repository remains private. The [public distribution repository](https://github.com/LUNA12379/presence-studio-releases) is for documentation and release downloads.
 
@@ -12,7 +12,7 @@ This is the public distribution guide. The application source repository remains
 
 ## Features
 
-- Detect YouTube, YouTube Music and SoundCloud playback through the browser extension.
+- Detect YouTube, YouTube Music and SoundCloud playback in Microsoft Edge or Google Chrome through the same browser extension.
 - Customize activities with a title, status, image, link and elapsed or countdown timer.
 - Save up to 30 presets, load them in the editor or apply them from the Presets page.
 - Crop photos to 512 × 512 or 1024 × 1024 PNG, or keep the full image with transparent padding.
@@ -25,10 +25,10 @@ This is the public distribution guide. The application source repository remains
 1. Download `Presence-Studio-<version>-Setup.exe` from [Releases](https://github.com/LUNA12379/presence-studio-releases/releases). The installer includes Node.js and downloads Microsoft WebView2 if missing. An internet connection may be needed. .NET Framework 4.7.2 or later is required.
 2. Open Presence Studio and the **Discord desktop app**. Choose **EN / 한국어** in the top bar or first-run guide. New installations start in English; existing Korean installations keep Korean.
 3. Choose **New Application** in the [Discord Developer Portal](https://discord.com/developers/applications). Use **the name you want displayed on Discord**. Copy the **Application ID** from General Information into **Connections & settings → Default Application ID**, then save. No password, user token or bot token is needed.
-4. Copy the extension folder path shown in the app. Open `edge://extensions` in Edge or `chrome://extensions` in Chrome, enable **Developer mode**, choose **Load unpacked**, and select that folder. Refresh your YouTube and SoundCloud tabs. The app's extension-manager button opens Edge.
+4. Copy the folder path from **Connections & settings → Connect browser extension**. Open `edge://extensions` in Edge or `chrome://extensions` in Chrome, enable **Developer mode**, choose **Load unpacked**, and select that folder. Refresh your YouTube and SoundCloud tabs. Install the extension in each browser you use. The **Edge extensions** button opens Edge's manager; Chrome users should enter `chrome://extensions` in Chrome's address bar.
 5. Play a video or track. Enable **Share activity** in Presence Studio and activity sharing in Discord if it is disabled.
 
-The extension is included with the installer and uses Chromium's Manifest V3. Edge is the tested browser; the same unpacked extension is intended for Chrome, but Chrome has not completed the same end-to-end verification. Browser-store installation is not currently available. See the [Chrome instructions for loading an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).
+Microsoft Edge and Google Chrome are both supported. The extension is included with the installer and uses Chromium's Manifest V3; load the same folder in either browser. The **Browser extension** connection status applies to both browsers. Browser-store installation is not currently available. See the [Chrome instructions for loading an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).
 
 The installer is not code-signed yet. Windows may show an unknown-publisher warning. Use files from the project's release page.
 

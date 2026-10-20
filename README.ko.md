@@ -4,7 +4,7 @@
 
 지금 보는 영상, 듣는 음악, 직접 꾸민 활동을 Discord 활동과 데스크톱·OBS 오버레이에 표시하는 앱입니다.
 
-**Windows 10/11 x64 · YouTube · YouTube Music · SoundCloud · English / 한국어**
+**Windows 10/11 x64 · Edge / Chrome · YouTube · YouTube Music · SoundCloud · English / 한국어**
 
 공개 배포용 안내입니다. 소스 저장소는 비공개로 유지하며, [공개 배포 저장소](https://github.com/LUNA12379/presence-studio-releases)에는 설명서와 배포 파일을 올립니다.
 
@@ -25,10 +25,10 @@
 1. [Releases](https://github.com/LUNA12379/presence-studio-releases/releases)에서 `Presence-Studio-<버전>-Setup.exe`를 내려받으세요. Node.js가 포함되며, Microsoft WebView2가 없으면 인터넷으로 설치합니다. .NET Framework 4.7.2 이상이 필요합니다.
 2. Presence Studio와 **Discord 데스크톱 앱**을 실행하세요. 앱 상단이나 처음 뜨는 설명서의 **EN / 한국어**에서 언어를 고릅니다. 신규 설치는 영어로 시작하고 기존 설정은 한국어를 유지합니다.
 3. [Discord 개발자 페이지](https://discord.com/developers/applications)에서 **New Application**을 눌러 **Discord에 표시하고 싶은 이름**으로 앱을 만드세요. General Information의 **Application ID**를 **연결 & 설정 → 기본 Application ID**에 저장합니다. 비밀번호·사용자 토큰·봇 토큰은 필요 없습니다.
-4. 앱에 나온 확장 폴더 경로를 복사하세요. Edge의 `edge://extensions` 또는 Chrome의 `chrome://extensions`에서 **개발자 모드 → 압축 풀린 확장 프로그램 로드**로 해당 폴더를 선택합니다. 기존 YouTube·SoundCloud 탭도 새로고침하세요. 앱의 확장 관리 버튼은 Edge를 엽니다.
+4. **연결 & 설정 → 브라우저 확장 연결**에서 폴더 경로를 복사하세요. Edge의 `edge://extensions` 또는 Chrome의 `chrome://extensions`에서 **개발자 모드 → 압축 풀린 확장 프로그램 로드**로 해당 폴더를 선택합니다. 기존 YouTube·SoundCloud 탭도 새로고침하세요. 사용하는 브라우저마다 확장을 설치하세요. **Edge 확장 관리** 버튼은 Edge를 엽니다. Chrome 사용자는 Chrome 주소창에 `chrome://extensions`를 입력하세요.
 5. 영상이나 음악을 재생하세요. 앱의 **활동 공유**를 켜고, Discord의 활동 공유도 꺼져 있다면 켜 주세요.
 
-확장은 설치 파일에 포함되며 Chromium의 Manifest V3를 사용합니다. Edge에서 동작을 검증했으며 Chrome에도 같은 폴더를 로드하는 구조입니다. Chrome에서는 아직 Edge와 동일한 전체 흐름 검증을 마치지 않았습니다. 현재 브라우저 스토어를 통한 설치는 제공하지 않습니다. [Chrome 공식 압축 풀린 확장 설치 안내](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)도 참고하세요.
+Microsoft Edge와 Google Chrome을 모두 지원합니다. 설치 파일에 포함된 Chromium Manifest V3 확장을 두 브라우저에서 같은 폴더로 로드하면 됩니다. 연결 상태의 **브라우저 확장**은 두 브라우저 모두에 해당합니다. 현재 브라우저 스토어를 통한 설치는 제공하지 않습니다. [Chrome 공식 압축 풀린 확장 설치 안내](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)도 참고하세요.
 
 설치 파일에는 아직 코드 서명이 없어 Windows에서 알 수 없는 게시자 경고가 나올 수 있습니다. 프로젝트의 공식 배포 페이지에서 받은 파일을 사용하세요.
 
