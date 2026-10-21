@@ -72,6 +72,8 @@ If the default application is named **YouTube**, SoundCloud and custom activitie
 
 ## Images: two destinations
 
+In **Customize**, the preview has **App & overlay** and **Discord activity** buttons. Choosing a local or Discord image immediately switches to that destination, including after loading a preset. The selections stay independent. Use **Show this activity** to publish your changes, or **Overwrite selected preset** to save them to that preset.
+
 | Setting | Where it appears |
 | --- | --- |
 | **My images** | App preview, desktop overlay and OBS overlay. Files stay on this PC. |
