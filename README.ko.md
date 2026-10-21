@@ -6,9 +6,13 @@
 
 **Windows 10/11 x64 · Edge / Chrome · YouTube · YouTube Music · SoundCloud · English / 한국어**
 
-공개 배포용 안내입니다. 소스 저장소는 비공개로 유지하며, [공개 배포 저장소](https://github.com/LUNA12379/presence-studio-releases)에는 설명서와 배포 파일을 올립니다.
+이 저장소는 Windows 설치 파일·자동 업데이트·사용 설명서를 제공합니다. 앱과 브라우저 확장 소스는 [presence-studio](https://github.com/LUNA12379/presence-studio)에 공개되어 있습니다.
 
-**[최신 Windows 설치 파일 다운로드](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · 배포 페이지의 **Assets**에서 `Presence-Studio-<버전>-Setup.exe`를 선택하세요. GitHub가 자동으로 표시하는 “Source code” 압축 파일은 이 배포 안내 문서이며 앱 설치 파일이 아닙니다.
+**[최신 Windows 설치 파일 다운로드](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · 배포 페이지의 **Assets**에서 `Presence-Studio-<버전>-Setup.exe`를 선택하세요. **2.8.0부터** 설치 파일과 정확히 같은 소스의 `Presence-Studio-<버전>-source.zip`, SHA-256 파일, `release-manifest.json`도 함께 제공합니다. 이 배포 저장소에서 GitHub가 자동으로 표시하는 “Source code”는 안내 문서이므로, 앱 소스는 이름에 `-source.zip`이 붙은 파일을 선택하세요.
+
+## 소스와 라이선스
+
+Presence Studio 2.8.0부터 **GPLv3 전용 라이선스와 좁은 범위의 WebView2 연결·배포 예외**를 적용합니다. [COPYING](https://github.com/LUNA12379/presence-studio/blob/main/COPYING), [LICENSE](https://github.com/LUNA12379/presence-studio/blob/main/LICENSE), [외부 구성요소 고지](https://github.com/LUNA12379/presence-studio/blob/main/THIRD-PARTY-NOTICES.md)를 확인하세요. 빌드와 기여 방법은 [개발 안내](https://github.com/LUNA12379/presence-studio/blob/main/DEVELOPMENT.md)에 있습니다. 이전 설치 파일은 변경하지 않으며 해당 배포에는 새 소스 묶음이 포함되지 않습니다.
 
 ## 주요 기능
 
@@ -31,6 +35,8 @@
 Microsoft Edge와 Google Chrome을 모두 지원합니다. 설치 파일에 포함된 Chromium Manifest V3 확장을 두 브라우저에서 같은 폴더로 로드하면 됩니다. 연결 상태의 **브라우저 확장**은 두 브라우저 모두에 해당합니다. 현재 브라우저 스토어를 통한 설치는 제공하지 않습니다. [Chrome 공식 압축 풀린 확장 설치 안내](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)도 참고하세요.
 
 설치 파일에는 아직 코드 서명이 없어 Windows에서 알 수 없는 게시자 경고가 나올 수 있습니다. 프로젝트의 공식 배포 페이지에서 받은 파일을 사용하세요.
+
+Edge와 Chrome 및 여러 브라우저 프로필을 동시에 사용할 수 있습니다. 2.8.0부터 탭을 브라우저별로 구분합니다. 업데이트 후 모든 브라우저에서 확장 **1.2.0**과 미디어 탭을 새로고침하고 예전에 고정한 탭은 다시 선택하세요. 추가된 `storage` 권한은 무작위 프로필 ID를 로컬에 저장하며 동기화하거나 Discord에 보내지 않습니다.
 
 ## SoundCloud 사용하기
 
@@ -81,6 +87,8 @@ Application ID·프리셋·사진·언어 설정은 `%APPDATA%\PresenceStudio`�
 
 **연결 & 설정 → 설명서 보기**에서 설명서를 다시 열 수 있습니다. 이미지 목록이 비었다면 앱에 저장한 ID와 사진을 올린 애플리케이션이 같은지 확인하고, 개발자 페이지에서 저장한 뒤 새로고침하세요.
 
-문제는 [Issues](https://github.com/LUNA12379/presence-studio-releases/issues)에 앱 버전과 재현 순서를 적어 주세요. `config.json`, 생성된 `connection.js`, 개인 오버레이 주소나 개인정보가 담긴 화면은 그대로 첨부하지 마세요.
+일반 문제는 [소스 Issues](https://github.com/LUNA12379/presence-studio/issues)에 앱 버전과 재현 순서를 적어 주세요. `config.json`, 생성된 `connection.js`, 개인 오버레이 주소나 개인정보가 담긴 화면은 그대로 첨부하지 마세요.
+
+보안 문제는 [비공개 취약점 신고](https://github.com/LUNA12379/presence-studio/security/advisories/new)를 이용하고, 자격 증명이나 악용 방법은 공개 이슈에 올리지 마세요.
 
 Presence Studio는 Discord·Google·YouTube·SoundCloud·Microsoft와 제휴하지 않은 독립 프로젝트입니다.

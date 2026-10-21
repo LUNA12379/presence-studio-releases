@@ -6,9 +6,13 @@ Show what you're watching, listening to or working on with Discord Rich Presence
 
 **Windows 10/11 x64 · Edge / Chrome · YouTube · YouTube Music · SoundCloud · English / 한국어**
 
-This is the public distribution guide. The application source repository remains private. The [public distribution repository](https://github.com/LUNA12379/presence-studio-releases) is for documentation and release downloads.
+This repository hosts Windows installers, the update channel and user guides. The application and browser extension source are available in [presence-studio](https://github.com/LUNA12379/presence-studio).
 
-**[Download the latest Windows installer](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · Open the release and choose `Presence-Studio-<version>-Setup.exe` under **Assets**. The GitHub-generated “Source code” archives contain this distribution guide, not the app.
+**[Download the latest Windows installer](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · Open the release and choose `Presence-Studio-<version>-Setup.exe` under **Assets**. Starting with **2.8.0**, each release also includes `Presence-Studio-<version>-source.zip`, its SHA-256 file and `release-manifest.json` for the exact application source used to build that installer. GitHub’s automatic “Source code” links on this distribution repository contain only these guides; use the explicitly named source ZIP for the app.
+
+## Source and license
+
+Presence Studio 2.8.0 and later are **GPLv3 only with a narrow WebView2 linking/distribution permission**. See [COPYING](https://github.com/LUNA12379/presence-studio/blob/main/COPYING), [LICENSE](https://github.com/LUNA12379/presence-studio/blob/main/LICENSE) and [third-party notices](https://github.com/LUNA12379/presence-studio/blob/main/THIRD-PARTY-NOTICES.md). Read the [development guide](https://github.com/LUNA12379/presence-studio/blob/main/DEVELOPMENT.md) to build or contribute. Earlier installers are unchanged; their release pages do not contain the new matching-source bundle.
 
 ## Features
 
@@ -31,6 +35,8 @@ This is the public distribution guide. The application source repository remains
 Microsoft Edge and Google Chrome are both supported. The extension is included with the installer and uses Chromium's Manifest V3; load the same folder in either browser. The **Browser extension** connection status applies to both browsers. Browser-store installation is not currently available. See the [Chrome instructions for loading an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).
 
 The installer is not code-signed yet. Windows may show an unknown-publisher warning. Use files from the project's release page.
+
+Edge and Chrome can run together, including multiple browser profiles. Version 2.8.0 separates their tab identities. After updating, reload extension **1.2.0** and media tabs in every browser; re-pin any previously pinned tab. The new `storage` permission stores a random profile ID locally; it is not synced or sent to Discord.
 
 ## SoundCloud playback
 
@@ -81,6 +87,8 @@ The extension sends current playback information to a local service on your PC. 
 
 Reopen the guide from **Connections & settings → Open guide**. If the image list is empty, check that your ID matches the application where you uploaded the image, save the upload in the Developer Portal, then refresh the list.
 
-Report problems through [Issues](https://github.com/LUNA12379/presence-studio-releases/issues), including the app version and steps to reproduce. Do not attach `config.json`, the generated `connection.js`, private overlay URLs or personal screenshots without reviewing them first.
+Report ordinary problems through [source Issues](https://github.com/LUNA12379/presence-studio/issues), including the app version and steps to reproduce. Do not attach `config.json`, the generated `connection.js`, private overlay URLs or personal screenshots without reviewing them first.
+
+For security issues, use [private vulnerability reporting](https://github.com/LUNA12379/presence-studio/security/advisories/new); do not publish credentials or exploit details in an issue.
 
 Presence Studio is an independent project, not affiliated with Discord, Google, YouTube, SoundCloud or Microsoft.
