@@ -2,13 +2,23 @@
 
 [English](README.md) · **한국어**
 
+**[Windows 앱 다운로드](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · **[소스 코드 보기](https://github.com/LUNA12379/presence-studio)**
+
 지금 보는 영상, 듣는 음악, 직접 꾸민 활동을 Discord 활동과 데스크톱·OBS 오버레이에 표시하는 앱입니다.
 
 **Windows 10/11 x64 · Edge / Chrome · YouTube · YouTube Music · SoundCloud · English / 한국어**
 
 이 저장소는 Windows 설치 파일·자동 업데이트·사용 설명서를 제공합니다. 앱과 브라우저 확장 소스는 [presence-studio](https://github.com/LUNA12379/presence-studio)에 공개되어 있습니다.
 
-**[최신 Windows 설치 파일 다운로드](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · 배포 페이지의 **Assets**에서 `Presence-Studio-<버전>-Setup.exe`를 선택하세요. **2.8.0부터** 설치 파일과 정확히 같은 소스의 `Presence-Studio-<버전>-source.zip`, SHA-256 파일, `release-manifest.json`도 함께 제공합니다. 이 배포 저장소에서 GitHub가 자동으로 표시하는 “Source code”는 안내 문서이므로, 앱 소스는 이름에 `-source.zip`이 붙은 파일을 선택하세요.
+## 다운로드와 소스 코드
+
+| 필요한 것 | 이동할 곳 |
+| --- | --- |
+| Windows 앱 설치·업데이트 | [최신 릴리스](https://github.com/LUNA12379/presence-studio-releases/releases/latest) → **Assets** → `Presence-Studio-<버전>-Setup.exe` |
+| 앱·확장 코드 확인·수정·빌드 | [공개 소스 저장소](https://github.com/LUNA12379/presence-studio) · [빌드 안내](https://github.com/LUNA12379/presence-studio/blob/main/DEVELOPMENT.md) |
+| 특정 설치 파일과 일치하는 소스 | [전체 릴리스](https://github.com/LUNA12379/presence-studio-releases/releases) → 버전 선택 → **Assets** → `Presence-Studio-<버전>-source.zip` (2.8.0 이상) |
+
+2.8.0부터 SHA-256 파일과 `release-manifest.json`으로 설치 파일과 소스의 대응 관계를 함께 제공합니다. 배포 저장소에서 GitHub가 자동으로 만드는 **Source code (zip / tar.gz)**에는 안내 문서가 들어 있습니다. 앱 소스는 이름이 `Presence-Studio-<버전>-source.zip`인 파일을 선택하세요.
 
 ## 소스와 라이선스
 
@@ -36,7 +46,7 @@ Microsoft Edge와 Google Chrome을 모두 지원합니다. 설치 파일에 포�
 
 설치 파일에는 아직 코드 서명이 없어 Windows에서 알 수 없는 게시자 경고가 나올 수 있습니다. 프로젝트의 공식 배포 페이지에서 받은 파일을 사용하세요.
 
-Edge와 Chrome 및 여러 브라우저 프로필을 동시에 사용할 수 있습니다. 2.8.0부터 탭을 브라우저별로 구분합니다. 업데이트 후 모든 브라우저에서 확장 **1.2.0**과 미디어 탭을 새로고침하고 예전에 고정한 탭은 다시 선택하세요. 추가된 `storage` 권한은 무작위 프로필 ID를 로컬에 저장하며 동기화하거나 Discord에 보내지 않습니다.
+Edge와 Chrome 및 여러 브라우저 프로필을 동시에 사용할 수 있습니다. 2.8.0부터 탭을 브라우저별로 구분합니다. 업데이트 후 모든 브라우저에서 앱에 포함된 확장과 미디어 탭을 새로고침하세요. 2.8.0보다 오래된 버전에서 업데이트한다면 예전에 고정한 탭을 다시 선택하세요. `storage` 권한은 무작위 프로필 ID를 로컬에 저장하며 동기화하거나 Discord에 보내지 않습니다.
 
 ## SoundCloud 사용하기
 
