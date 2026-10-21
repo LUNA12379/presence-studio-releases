@@ -69,6 +69,8 @@ If the default application is named **YouTube**, SoundCloud and custom activitie
 
 To use the same photo in both places, choose it under **My images**, crop and save it, then use **Save as PNG**. Upload that PNG through **Register Discord image → Rich Presence → Art Assets**, save in the Developer Portal, and click **Refresh list** in the app. Images are not uploaded automatically. If you use a custom Application ID, upload to that application.
 
+From **2.8.1**, the app compares its bundled extension version with the version actually running in each browser. A mismatch banner opens the version list in **Connections & settings → Browser extension**. Reload older extensions; update the app first if the extension is newer. Extension **1.3.0** reports its version even without media tabs. Older extensions appear as “Version unknown” when they send playback data; a disconnected extension cannot be inspected.
+
 ## Overlays, presets and updates
 
 - **Desktop:** enable **Overlay → Show on desktop** and drag the card into position. Position lock and click-through are available.
