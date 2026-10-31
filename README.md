@@ -50,7 +50,7 @@ Edge and Chrome can run together, including multiple browser profiles. Since 2.8
 
 ## Browser store pairing (2.9.0)
 
-The Chrome Web Store release is being prepared; it is **not yet published**. Use the bundled local extension until the store link appears in the app. Existing local extensions keep working.
+Extension 1.4.0 was submitted for Chrome Web Store review on November 1, 2026; it is **not yet published**. Use the bundled local extension until the store link appears in the app. Existing local extensions keep working.
 
 Once released, install the store extension in Chrome or Edge, then open **Connections & settings → Browser extension → Create one-time pairing code** in the Windows app. Click the browser extension icon, enter the code and choose **Connect this browser**. Each code works once within 3 minutes. Pairing is saved locally and survives app, browser and computer restarts. Pair separately in each browser profile. No Discord token is needed; existing Application IDs and presets stay unchanged.
 
