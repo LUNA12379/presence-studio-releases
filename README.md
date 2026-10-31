@@ -28,7 +28,7 @@ Presence Studio 2.8.0 and later are **GPLv3 only with a narrow WebView2 linking/
 
 - Detect YouTube, YouTube Music and SoundCloud playback in Microsoft Edge or Google Chrome through the same browser extension.
 - Customize activities with a title, status, image, link and elapsed or countdown timer.
-- Save up to 30 presets, load them in the editor or apply them from the Presets page.
+- Save up to 30 presets and apply them immediately from the saved preset list or the Presets page. Use **Edit only** to prepare changes without sharing.
 - Crop photos to 512 × 512 or 1024 × 1024 PNG, or keep the full image with transparent padding.
 - Show an always-on-top desktop card or a transparent OBS Browser Source.
 - Switch between English and Korean, with your choice saved across restarts.
@@ -87,7 +87,7 @@ From **2.8.1**, the app compares its bundled extension version with the version 
 
 - **Desktop:** enable **Overlay → Show on desktop** and drag the card into position. Position lock and click-through are available.
 - **OBS:** add a Browser Source and paste the address and dimensions from the app. Keep the address private: it includes a local access key. OBS works independently of the desktop-overlay switch.
-- **Presets:** **Save as preset** uses the activity title as its name. Select it from **Saved presets** to load the editor, then click **Show this activity** to publish. Loading alone does not change your current activity.
+- **Presets:** **Save as preset** uses the activity title as its name. Selecting an entry from **Saved presets** immediately applies its title, status, images, timer and link to Discord and overlays, enables sharing and restarts the timer. Use **Presets → Edit only** to load it without publishing, then **Show this activity** when ready. Saving or overwriting a preset alone does not change the shared activity.
 - **Updates:** use **Connections & settings → App updates**. Enable **Check for updates when the app starts** to check on launch. Select **Download new version**, then **Install and restart** when ready. Checking does not download or install anything. Downloaded installers are checked against the release's SHA-256 digest before installation. If extension files change, reload the extension in your browser's extension manager and refresh YouTube and SoundCloud tabs.
 - **Shortcuts:** `Ctrl+Shift+P` toggles sharing; `Ctrl+Shift+O` toggles the desktop overlay. Closing the window keeps the app in the tray. Use **Quit** to exit completely.
 
