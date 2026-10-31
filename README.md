@@ -48,6 +48,16 @@ The installer is not code-signed yet. Windows may show an unknown-publisher warn
 
 Edge and Chrome can run together, including multiple browser profiles. Since 2.8.0, their tab identities are separate. After updating, reload the extension bundled with the app and media tabs in every browser. If upgrading from a version older than 2.8.0, re-pin any previously pinned tab. The `storage` permission stores a random profile ID locally; it is not synced or sent to Discord.
 
+## Browser store pairing (2.9.0)
+
+The Chrome Web Store release is being prepared; it is **not yet published**. Use the bundled local extension until the store link appears in the app. Existing local extensions keep working.
+
+Once released, install the store extension in Chrome or Edge, then open **Connections & settings → Browser extension → Create one-time pairing code** in the Windows app. Click the browser extension icon, enter the code and choose **Connect this browser**. Each code works once within 3 minutes. Pairing is saved locally and survives app, browser and computer restarts. Pair separately in each browser profile. No Discord token is needed; existing Application IDs and presets stay unchanged.
+
+After the official store release, an installation reminder appears when the app interface starts until a store extension has been paired. It waits for the first-run guide to close and can be dismissed with **Later**. The app does not open a browser or install anything automatically. After switching, disable the old unpacked extension to prevent duplicate activity reports.
+
+The browser updates a store-installed extension. For a local unpacked copy, reload it in the browser extension manager after an app update and refresh media tabs. Use **Disconnect** in the popup or app to revoke a store pairing. See the [privacy notice](PRIVACY.md) for local storage and Discord sharing details.
+
 ## SoundCloud playback
 
 After updating the app, open `edge://extensions` or `chrome://extensions` and reload **Presence Studio — YouTube & SoundCloud** (formerly **YouTube → Discord 활동**). Allow access to SoundCloud if your browser asks, then reload your SoundCloud tabs and start a track.
@@ -81,7 +91,7 @@ In **Customize**, the preview has **App & overlay** and **Discord activity** but
 
 To use the same photo in both places, choose it under **My images**, crop and save it, then use **Save as PNG**. Upload that PNG through **Register Discord image → Rich Presence → Art Assets**, save in the Developer Portal, and click **Refresh list** in the app. Images are not uploaded automatically. If you use a custom Application ID, upload to that application.
 
-From **2.8.1**, the app compares its bundled extension version with the version actually running in each browser. A mismatch banner opens the version list in **Connections & settings → Browser extension**. Reload older extensions; update the app first if the extension is newer. Extension **1.3.0** reports its version even without media tabs. Older extensions appear as “Version unknown” when they send playback data; a disconnected extension cannot be inspected.
+From **2.8.1**, the app compares its bundled extension version with the version actually running in each browser. A mismatch banner opens the version list in **Connections & settings → Browser extension**. Reload older extensions; update the app first if the extension is newer. Extension **1.3.0 and later** reports its version even without media tabs. Older extensions appear as “Version unknown” when they send playback data; a disconnected extension cannot be inspected.
 
 ## Overlays, presets and updates
 
@@ -101,7 +111,7 @@ The extension sends current playback information to a local service on your PC. 
 
 Reopen the guide from **Connections & settings → Open guide**. If the image list is empty, check that your ID matches the application where you uploaded the image, save the upload in the Developer Portal, then refresh the list.
 
-Report ordinary problems through [source Issues](https://github.com/LUNA12379/presence-studio/issues), including the app version and steps to reproduce. Do not attach `config.json`, the generated `connection.js`, private overlay URLs or personal screenshots without reviewing them first.
+Report ordinary problems through [source Issues](https://github.com/LUNA12379/presence-studio/issues), including the app version and steps to reproduce. Do not attach `config.json`, `browser-pairings.json`, the generated local extension folder, private overlay URLs or personal screenshots without reviewing them first.
 
 For security issues, use [private vulnerability reporting](https://github.com/LUNA12379/presence-studio/security/advisories/new); do not publish credentials or exploit details in an issue.
 
