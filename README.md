@@ -2,7 +2,7 @@
 
 **English** · [한국어](README.ko.md)
 
-**[Download for Windows](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · **[Browse source code](https://github.com/LUNA12379/presence-studio)**
+**[Download for Windows](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · **[Install browser extension](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg)** · **[Browse source code](https://github.com/LUNA12379/presence-studio)**
 
 Show what you're watching, listening to or working on with Discord Rich Presence, a desktop overlay and OBS.
 
@@ -15,6 +15,7 @@ This repository hosts Windows installers, the update channel and user guides. Th
 | What you need | Where to find it |
 | --- | --- |
 | Install or update the Windows app | [Latest release](https://github.com/LUNA12379/presence-studio-releases/releases/latest) → **Assets** → `Presence-Studio-<version>-Setup.exe` |
+| Install the Chrome / Edge extension | [Chrome Web Store](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg) — requires Windows app 2.9.0 or later |
 | Read, change or build the app and extension | [Public source repository](https://github.com/LUNA12379/presence-studio) · [Build instructions](https://github.com/LUNA12379/presence-studio/blob/main/DEVELOPMENT.md) |
 | Source matching a particular installer | [All releases](https://github.com/LUNA12379/presence-studio-releases/releases) → select the version → **Assets** → `Presence-Studio-<version>-source.zip` (2.8.0 and later) |
 
@@ -39,28 +40,32 @@ Presence Studio 2.8.0 and later are **GPLv3 only with a narrow WebView2 linking/
 1. Download `Presence-Studio-<version>-Setup.exe` from [Releases](https://github.com/LUNA12379/presence-studio-releases/releases). The installer includes Node.js and downloads Microsoft WebView2 if missing. An internet connection may be needed. .NET Framework 4.7.2 or later is required.
 2. Open Presence Studio and the **Discord desktop app**. Choose **EN / 한국어** in the top bar or first-run guide. New installations start in English; existing Korean installations keep Korean.
 3. Choose **New Application** in the [Discord Developer Portal](https://discord.com/developers/applications). Use **the name you want displayed on Discord**. Copy the **Application ID** from General Information into **Connections & settings → Default Application ID**, then save. No password, user token or bot token is needed.
-4. Copy the folder path from **Connections & settings → Connect browser extension**. Open `edge://extensions` in Edge or `chrome://extensions` in Chrome, enable **Developer mode**, choose **Load unpacked**, and select that folder. Refresh your YouTube and SoundCloud tabs. Install the extension in each browser you use. The **Edge extensions** button opens Edge's manager; Chrome users should enter `chrome://extensions` in Chrome's address bar.
+4. Install **[Presence Studio — YouTube & SoundCloud](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg)** from the Chrome Web Store in Chrome or Edge. In the Windows app, open **Connections & settings → Browser extension → Create one-time pairing code**. Click the browser extension icon, enter the code and choose **Connect this browser**. Reload any open YouTube, YouTube Music and SoundCloud tabs. Pair each browser profile separately.
 5. Play a video or track. Enable **Share activity** in Presence Studio and activity sharing in Discord if it is disabled.
 
-Microsoft Edge and Google Chrome are both supported. The extension is included with the installer and uses Chromium's Manifest V3; load the same folder in either browser. The **Browser extension** connection status applies to both browsers. Browser-store installation is not currently available. See the [Chrome instructions for loading an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).
+Microsoft Edge and Google Chrome are both supported. The **Browser extension** connection status applies to either browser. Chrome Web Store installation does not require Developer mode. In Edge, allow extensions from other stores if the browser asks. When switching from an old unpacked copy, disable that copy after pairing the store extension to avoid duplicate playback reports.
 
 The installer is not code-signed yet. Windows may show an unknown-publisher warning. Use files from the project's release page.
 
-Edge and Chrome can run together, including multiple browser profiles. Since 2.8.0, their tab identities are separate. After updating, reload the extension bundled with the app and media tabs in every browser. If upgrading from a version older than 2.8.0, re-pin any previously pinned tab. The `storage` permission stores a random profile ID locally; it is not synced or sent to Discord.
+Edge and Chrome can run together, including multiple browser profiles. Since 2.8.0, their tab identities are separate. The browser updates a store-installed extension automatically. If upgrading from a version older than 2.8.0, re-pin any previously pinned tab. The `storage` permission keeps pairing information and a random profile ID locally; they are not synced to a browser account.
 
 ## Browser store pairing (2.9.0)
 
-Extension 1.4.0 was submitted for Chrome Web Store review on November 1, 2026; it is **not yet published**. Use the bundled local extension until the store link appears in the app. Existing local extensions keep working.
+Extension **1.4.0** is available on the **[Chrome Web Store](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg)**, published November 3, 2026. It requires Presence Studio **2.9.0 or later** and Discord desktop on Windows. Existing unpacked extensions remain supported.
 
-Once released, install the store extension in Chrome or Edge, then open **Connections & settings → Browser extension → Create one-time pairing code** in the Windows app. Click the browser extension icon, enter the code and choose **Connect this browser**. Each code works once within 3 minutes. Pairing is saved locally and survives app, browser and computer restarts. Pair separately in each browser profile. No Discord token is needed; existing Application IDs and presets stay unchanged.
+Install the store extension in Chrome or Edge, then open **Connections & settings → Browser extension → Create one-time pairing code** in the Windows app. Click the browser extension icon, enter the code and choose **Connect this browser**. Each code works once within 3 minutes. Pairing is saved locally and survives app, browser and computer restarts. Pair separately in each browser profile. No Discord token is needed; existing Application IDs and presets stay unchanged.
 
-After the official store release, an installation reminder appears when the app interface starts until a store extension has been paired. It waits for the first-run guide to close and can be dismissed with **Later**. The app does not open a browser or install anything automatically. After switching, disable the old unpacked extension to prevent duplicate activity reports.
+An installation reminder appears when the app interface starts until a store extension has been paired. It waits for the first-run guide to close and can be dismissed with **Later**. The app does not open a browser or install anything automatically. After switching, disable the old unpacked extension to prevent duplicate activity reports.
 
 The browser updates a store-installed extension. For a local unpacked copy, reload it in the browser extension manager after an app update and refresh media tabs. Use **Disconnect** in the popup or app to revoke a store pairing. See the [privacy notice](PRIVACY.md) for local storage and Discord sharing details.
 
+### Optional local extension
+
+For development or an existing local setup, copy the folder path from **Connections & settings → Browser extension → Local extension installation**. In `edge://extensions` or `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select that folder. The **Edge extensions** button opens Edge; Chrome users should enter `chrome://extensions` themselves. Reload this copy after app updates and refresh media tabs. Do not run it alongside a paired store copy in the same profile or share its generated folder, which contains a private connection key.
+
 ## SoundCloud playback
 
-After updating the app, open `edge://extensions` or `chrome://extensions` and reload **Presence Studio — YouTube & SoundCloud** (formerly **YouTube → Discord 활동**). Allow access to SoundCloud if your browser asks, then reload your SoundCloud tabs and start a track.
+Install and pair the store extension, then refresh your SoundCloud tabs and play a track. If you use an unpacked copy, reload it in `edge://extensions` or `chrome://extensions` after app updates. Allow SoundCloud access if the browser asks.
 
 The extension reads the bottom miniplayer: track title, artist, cover art, playback position and pause state. You can browse another SoundCloud page while the track continues. SoundCloud uses **Listening** in automatic activity mode. A previously paused track restored when opening the site is ignored until you play it.
 
@@ -98,7 +103,7 @@ From **2.8.1**, the app compares its bundled extension version with the version 
 - **Desktop:** enable **Overlay → Show on desktop** and drag the card into position. Position lock and click-through are available.
 - **OBS:** add a Browser Source and paste the address and dimensions from the app. Keep the address private: it includes a local access key. OBS works independently of the desktop-overlay switch.
 - **Presets:** **Save as preset** uses the activity title as its name. Selecting an entry from **Saved presets** immediately applies its title, status, images, timer and link to Discord and overlays, enables sharing and restarts the timer. Use **Presets → Edit only** to load it without publishing, then **Show this activity** when ready. Saving or overwriting a preset alone does not change the shared activity.
-- **Updates:** use **Connections & settings → App updates**. Enable **Check for updates when the app starts** to check on launch. Select **Download new version**, then **Install and restart** when ready. Checking does not download or install anything. Downloaded installers are checked against the release's SHA-256 digest before installation. If extension files change, reload the extension in your browser's extension manager and refresh YouTube and SoundCloud tabs.
+- **Updates:** use **Connections & settings → App updates**. Enable **Check for updates when the app starts** to check on launch. Select **Download new version**, then **Install and restart** when ready. Checking does not download or install anything. Downloaded installers are checked against the release's SHA-256 digest before installation. Store extensions update through the browser. For unpacked copies, reload the extension in the browser extension manager after its files change, then refresh media tabs.
 - **Shortcuts:** `Ctrl+Shift+P` toggles sharing; `Ctrl+Shift+O` toggles the desktop overlay. Closing the window keeps the app in the tray. Use **Quit** to exit completely.
 
 If you used an early build with an unconfigured update channel, install the latest Setup.exe once to connect it. Later releases can be installed from the app.

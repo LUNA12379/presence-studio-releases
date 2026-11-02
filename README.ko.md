@@ -2,7 +2,7 @@
 
 [English](README.md) · **한국어**
 
-**[Windows 앱 다운로드](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · **[소스 코드 보기](https://github.com/LUNA12379/presence-studio)**
+**[Windows 앱 다운로드](https://github.com/LUNA12379/presence-studio-releases/releases/latest)** · **[브라우저 확장 설치](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg)** · **[소스 코드 보기](https://github.com/LUNA12379/presence-studio)**
 
 지금 보는 영상, 듣는 음악, 직접 꾸민 활동을 Discord 활동과 데스크톱·OBS 오버레이에 표시하는 앱입니다.
 
@@ -15,6 +15,7 @@
 | 필요한 것 | 이동할 곳 |
 | --- | --- |
 | Windows 앱 설치·업데이트 | [최신 릴리스](https://github.com/LUNA12379/presence-studio-releases/releases/latest) → **Assets** → `Presence-Studio-<버전>-Setup.exe` |
+| Chrome / Edge 확장 설치 | [Chrome 웹 스토어](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg) — Windows 앱 2.9.0 이상 필요 |
 | 앱·확장 코드 확인·수정·빌드 | [공개 소스 저장소](https://github.com/LUNA12379/presence-studio) · [빌드 안내](https://github.com/LUNA12379/presence-studio/blob/main/DEVELOPMENT.md) |
 | 특정 설치 파일과 일치하는 소스 | [전체 릴리스](https://github.com/LUNA12379/presence-studio-releases/releases) → 버전 선택 → **Assets** → `Presence-Studio-<버전>-source.zip` (2.8.0 이상) |
 
@@ -39,28 +40,32 @@ Presence Studio 2.8.0부터 **GPLv3 전용 라이선스와 좁은 범위의 WebV
 1. [Releases](https://github.com/LUNA12379/presence-studio-releases/releases)에서 `Presence-Studio-<버전>-Setup.exe`를 내려받으세요. Node.js가 포함되며, Microsoft WebView2가 없으면 인터넷으로 설치합니다. .NET Framework 4.7.2 이상이 필요합니다.
 2. Presence Studio와 **Discord 데스크톱 앱**을 실행하세요. 앱 상단이나 처음 뜨는 설명서의 **EN / 한국어**에서 언어를 고릅니다. 신규 설치는 영어로 시작하고 기존 설정은 한국어를 유지합니다.
 3. [Discord 개발자 페이지](https://discord.com/developers/applications)에서 **New Application**을 눌러 **Discord에 표시하고 싶은 이름**으로 앱을 만드세요. General Information의 **Application ID**를 **연결 & 설정 → 기본 Application ID**에 저장합니다. 비밀번호·사용자 토큰·봇 토큰은 필요 없습니다.
-4. **연결 & 설정 → 브라우저 확장 연결**에서 폴더 경로를 복사하세요. Edge의 `edge://extensions` 또는 Chrome의 `chrome://extensions`에서 **개발자 모드 → 압축 풀린 확장 프로그램 로드**로 해당 폴더를 선택합니다. 기존 YouTube·SoundCloud 탭도 새로고침하세요. 사용하는 브라우저마다 확장을 설치하세요. **Edge 확장 관리** 버튼은 Edge를 엽니다. Chrome 사용자는 Chrome 주소창에 `chrome://extensions`를 입력하세요.
+4. Chrome이나 Edge에서 **[Presence Studio — YouTube & SoundCloud](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg)** 스토어 확장을 설치하세요. Windows 앱의 **연결 & 설정 → 브라우저 확장 연결 → 일회용 연결 코드 만들기**를 누릅니다. 브라우저의 확장 아이콘을 열고 코드를 입력한 뒤 **이 브라우저 연결**을 누르세요. 열려 있던 YouTube·YouTube Music·SoundCloud 탭도 새로고침하세요. 사용하는 브라우저 프로필마다 한 번씩 연결합니다.
 5. 영상이나 음악을 재생하세요. 앱의 **활동 공유**를 켜고, Discord의 활동 공유도 꺼져 있다면 켜 주세요.
 
-Microsoft Edge와 Google Chrome을 모두 지원합니다. 설치 파일에 포함된 Chromium Manifest V3 확장을 두 브라우저에서 같은 폴더로 로드하면 됩니다. 연결 상태의 **브라우저 확장**은 두 브라우저 모두에 해당합니다. 현재 브라우저 스토어를 통한 설치는 제공하지 않습니다. [Chrome 공식 압축 풀린 확장 설치 안내](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)도 참고하세요.
+Microsoft Edge와 Google Chrome을 모두 지원합니다. 연결 상태의 **브라우저 확장**은 두 브라우저 모두에 해당합니다. 스토어 설치에는 개발자 모드가 필요하지 않습니다. Edge에서 다른 스토어의 확장 허용을 요청하면 허용하세요. 기존 압축 풀린 확장에서 전환한다면 스토어판 연결 후 기존 확장을 꺼서 재생 정보가 중복 전달되지 않게 하세요.
 
 설치 파일에는 아직 코드 서명이 없어 Windows에서 알 수 없는 게시자 경고가 나올 수 있습니다. 프로젝트의 공식 배포 페이지에서 받은 파일을 사용하세요.
 
-Edge와 Chrome 및 여러 브라우저 프로필을 동시에 사용할 수 있습니다. 2.8.0부터 탭을 브라우저별로 구분합니다. 업데이트 후 모든 브라우저에서 앱에 포함된 확장과 미디어 탭을 새로고침하세요. 2.8.0보다 오래된 버전에서 업데이트한다면 예전에 고정한 탭을 다시 선택하세요. `storage` 권한은 무작위 프로필 ID를 로컬에 저장하며 동기화하거나 Discord에 보내지 않습니다.
+Edge와 Chrome 및 여러 브라우저 프로필을 동시에 사용할 수 있습니다. 2.8.0부터 탭을 브라우저별로 구분합니다. 스토어 확장은 브라우저가 자동 업데이트합니다. 2.8.0보다 오래된 버전에서 업데이트한다면 예전에 고정한 탭을 다시 선택하세요. `storage` 권한은 연결 정보와 무작위 프로필 ID를 로컬에 저장하며 브라우저 계정으로 동기화하지 않습니다.
 
 ## 스토어 확장 연결 (2.9.0)
 
-확장 1.4.0은 2026년 11월 1일 크롬 웹스토어 심사에 제출했으며 **아직 출시되지 않았습니다**. 앱에 스토어 링크가 표시되기 전에는 기존 로컬 확장을 사용하세요. 기존에 설치한 로컬 확장도 계속 작동합니다.
+확장 **1.4.0**이 2026년 11월 3일 **[Chrome 웹 스토어](https://chromewebstore.google.com/detail/gplpaakngmgcpjlkckhiaiohgfhhalfg)**에 출시되었습니다. Windows의 Presence Studio **2.9.0 이상**과 Discord 데스크톱 앱이 필요합니다. 기존 로컬 확장도 계속 사용할 수 있습니다.
 
-출시 후에는 Chrome이나 Edge에 스토어 확장을 설치하고, Windows 앱의 **연결 & 설정 → 브라우저 확장 연결 → 일회용 연결 코드 만들기**를 누르세요. 브라우저의 확장 아이콘을 열고 코드를 입력한 다음 **이 브라우저 연결**을 누르면 됩니다. 코드는 3분 동안 한 번만 사용할 수 있습니다. 연결은 로컬에 저장되어 앱·브라우저·PC를 다시 켜도 유지됩니다. 브라우저 프로필마다 별도로 연결하세요. Discord 토큰은 필요 없고 기존 Application ID와 프리셋은 유지됩니다.
+Chrome이나 Edge에 스토어 확장을 설치하고, Windows 앱의 **연결 & 설정 → 브라우저 확장 연결 → 일회용 연결 코드 만들기**를 누르세요. 브라우저의 확장 아이콘을 열고 코드를 입력한 다음 **이 브라우저 연결**을 누르면 됩니다. 코드는 3분 동안 한 번만 사용할 수 있습니다. 연결은 로컬에 저장되어 앱·브라우저·PC를 다시 켜도 유지됩니다. 브라우저 프로필마다 별도로 연결하세요. Discord 토큰은 필요 없고 기존 Application ID와 프리셋은 유지됩니다.
 
-공식 스토어 출시 후에는 스토어 확장을 연결하기 전까지 앱 화면을 켤 때 설치 안내가 표시됩니다. 처음 설명서를 닫은 뒤에 나타나며 **나중에**로 닫을 수 있습니다. 브라우저를 자동으로 열거나 확장을 자동 설치하지는 않습니다. 전환을 마치면 기존 압축 풀린 확장을 꺼서 활동이 중복 전달되지 않게 하세요.
+스토어 확장을 연결하기 전까지 앱 화면을 켤 때 설치 안내가 표시됩니다. 처음 설명서를 닫은 뒤에 나타나며 **나중에**로 닫을 수 있습니다. 브라우저를 자동으로 열거나 확장을 자동 설치하지는 않습니다. 전환을 마치면 기존 압축 풀린 확장을 꺼서 활동이 중복 전달되지 않게 하세요.
 
 스토어 확장은 브라우저가 업데이트합니다. 로컬 확장은 앱 업데이트 후 브라우저 확장 관리에서 새로고침하고 미디어 탭도 새로고침하세요. 스토어 연결은 확장 팝업이나 앱에서 **연결 해제**할 수 있습니다. 저장 정보와 Discord 공유 범위는 [개인정보 안내](PRIVACY.ko.md)를 확인하세요.
 
+### 로컬 확장 설치 (선택)
+
+개발하거나 기존 로컬 설치를 유지하려면 **연결 & 설정 → 브라우저 확장 연결 → 로컬 확장 설치**에서 폴더 경로를 복사하세요. `edge://extensions` 또는 `chrome://extensions`에서 **개발자 모드 → 압축 풀린 확장 프로그램 로드**로 해당 폴더를 선택합니다. **Edge 확장 관리** 버튼은 Edge를 엽니다. Chrome에서는 주소창에 `chrome://extensions`를 입력하세요. 앱 업데이트 후 이 확장과 미디어 탭을 새로고침해야 합니다. 같은 프로필에서 스토어 확장과 동시에 사용하지 말고, 개인 연결 키가 들어 있는 생성된 폴더도 공유하지 마세요.
+
 ## SoundCloud 사용하기
 
-앱 업데이트 후 `edge://extensions` 또는 `chrome://extensions`에서 **Presence Studio — YouTube & SoundCloud** 확장(이전 이름: **YouTube → Discord 활동**)을 새로고침하세요. 브라우저가 SoundCloud 접근 권한을 요청하면 허용한 뒤 SoundCloud 탭도 새로고침하고 곡을 재생하세요.
+스토어 확장을 설치하고 앱과 연결한 뒤 SoundCloud 탭을 새로고침하고 곡을 재생하세요. 압축 풀린 확장을 사용한다면 앱 업데이트 후 `edge://extensions` 또는 `chrome://extensions`에서 확장을 새로고침하세요. 브라우저가 SoundCloud 접근 권한을 요청하면 허용해 주세요.
 
 하단 재생바에서 곡명·아티스트·커버 이미지·재생 시간·일시정지를 읽습니다. 음악을 재생하면서 다른 SoundCloud 페이지를 둘러봐도 현재 곡을 표시합니다. 자동 활동 종류는 **듣는 중**이며, 사이트를 열 때 복원된 예전 일시정지 곡은 직접 재생하기 전까지 표시하지 않습니다.
 
@@ -98,7 +103,7 @@ Edge와 Chrome 및 여러 브라우저 프로필을 동시에 사용할 수 있�
 - **데스크톱:** **오버레이 → 데스크톱에 표시**를 켜고 카드를 드래그합니다. 위치 잠금과 마우스 클릭 통과를 사용할 수 있습니다.
 - **OBS:** 브라우저 소스에 앱이 알려 주는 주소와 크기를 입력합니다. 주소에는 로컬 접근 키가 있으므로 공개하지 마세요. 데스크톱 오버레이가 꺼져 있어도 OBS에는 표시됩니다.
 - **프리셋:** **프리셋으로 저장**하면 현재 활동 제목으로 저장합니다. **저장한 프리셋**에서 선택하면 제목·상태·사진·타이머·링크가 Discord와 오버레이에 바로 적용되고, 활동 공유가 켜지며 타이머가 새로 시작합니다. 공유하지 않고 수정하려면 **프리셋 → 편집만 하기**를 사용한 뒤 **이 활동으로 표시하기**를 누르세요. 저장·덮어쓰기만으로 현재 공유 활동이 바뀌지는 않습니다.
-- **업데이트:** **연결 & 설정 → 앱 업데이트**에서 확인합니다. **앱을 켤 때 새 버전 확인**을 켜면 실행할 때 확인합니다. **새 버전 다운로드 → 설치하고 다시 시작** 순서로 진행하며, 확인만으로 다운로드하거나 설치하지 않습니다. 내려받은 파일의 SHA-256을 배포 정보와 대조한 뒤 설치합니다. 확장 파일이 변경되면 브라우저 확장 관리에서 확장과 YouTube·SoundCloud 탭을 새로고침하세요.
+- **업데이트:** **연결 & 설정 → 앱 업데이트**에서 확인합니다. **앱을 켤 때 새 버전 확인**을 켜면 실행할 때 확인합니다. **새 버전 다운로드 → 설치하고 다시 시작** 순서로 진행하며, 확인만으로 다운로드하거나 설치하지 않습니다. 내려받은 파일의 SHA-256을 배포 정보와 대조한 뒤 설치합니다. 스토어 확장은 브라우저가 업데이트합니다. 압축 풀린 확장은 파일이 변경되면 브라우저 확장 관리에서 새로고침하고 미디어 탭도 새로고침하세요.
 - **단축키:** `Ctrl+Shift+P`는 활동 공유, `Ctrl+Shift+O`는 데스크톱 오버레이를 켜고 끕니다. 창을 닫으면 트레이에 남고 **종료**를 눌러야 완전히 꺼집니다.
 
 Application ID·프리셋·사진·언어 설정은 `%APPDATA%\PresenceStudio`에 저장합니다. 업데이트·PC 재부팅 후에도 유지되며 앱을 제거해도 이 폴더는 남아 다시 설치할 때 사용할 수 있습니다.
@@ -111,7 +116,7 @@ Application ID·프리셋·사진·언어 설정은 `%APPDATA%\PresenceStudio`�
 
 **연결 & 설정 → 설명서 보기**에서 설명서를 다시 열 수 있습니다. 이미지 목록이 비었다면 앱에 저장한 ID와 사진을 올린 애플리케이션이 같은지 확인하고, 개발자 페이지에서 저장한 뒤 새로고침하세요.
 
-일반 문제는 [소스 Issues](https://github.com/LUNA12379/presence-studio/issues)에 앱 버전과 재현 순서를 적어 주세요. `config.json`, 생성된 `connection.js`, 개인 오버레이 주소나 개인정보가 담긴 화면은 그대로 첨부하지 마세요.
+일반 문제는 [소스 Issues](https://github.com/LUNA12379/presence-studio/issues)에 앱 버전과 재현 순서를 적어 주세요. `config.json`, `browser-pairings.json`, 생성된 로컬 확장 폴더, 개인 오버레이 주소나 개인정보가 담긴 화면은 그대로 첨부하지 마세요.
 
 보안 문제는 [비공개 취약점 신고](https://github.com/LUNA12379/presence-studio/security/advisories/new)를 이용하고, 자격 증명이나 악용 방법은 공개 이슈에 올리지 마세요.
 
